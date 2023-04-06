@@ -275,7 +275,7 @@ alma_rocky_dep() {
 
   # add remi repo (php8.1)
   install_packages "epel-release http://rpms.remirepo.net/enterprise/remi-release-$OS_VER_MAJOR.rpm"
-  dnf module enable -y php:remi-8.1
+  dnf module enable -y php:remi-8.0
 }
 
 dep_install() {
@@ -294,7 +294,7 @@ dep_install() {
     update_repos
 
     # Install dependencies
-    install_packages "php8.1 php8.1-{cli,common,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} \
+    install_packages "php8.0 php8.0-{cli,common,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} \
       mariadb-common mariadb-server mariadb-client \
       nginx \
       redis-server \
