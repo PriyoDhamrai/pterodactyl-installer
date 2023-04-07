@@ -294,12 +294,12 @@ dep_install() {
     update_repos
 
     # Install dependencies
-    install_packages "php8.0 php8.0-{cli,common,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} \
-      mariadb-common mariadb-server mariadb-client \
+    install_packages "php8.0 php8.0-{common,cli,gd,mysql,mbstring,bcmath,xml,fpm,curl,zip} \
+      mariadb-server \
       nginx \
       redis-server \
       zip unzip tar \
-      git cron"
+      git"
 
     [ "$CONFIGURE_LETSENCRYPT" == true ] && install_packages "certbot python3-certbot-nginx"
 
